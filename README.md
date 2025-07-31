@@ -1,15 +1,15 @@
-# 📊 Job Market Analyzer
+# Job Market Analyzer
 
 A web application that scrapes real job listings, analyses in-demand skills using NLP, and displays job openings with direct links - perfect for job seekers to see most relevant skills employers want.
 
 ## Features
 
-- 🔎 **Search** for any job role or keyword (e.g. "Python Developer")
-- 🌐 **Web scraper** pulls job listings from [python.org/jobs](https://www.python.org/jobs/)
-- 🧠 **NLP-based skill extraction** from job descriptions
-- 📈 **Interactive chart** showing top skills using Chart.js
-- 🧾 **Job listing results** with titles, companies, locations, and clickable links
-- 💡 Clean and modern UI using HTML, CSS, and Flask templating
+- **Search** for any job role or keyword (e.g. "Python Developer")
+- **Web scraper** pulls job listings from [python.org/jobs](https://www.python.org/jobs/)
+- **NLP-based skill extraction** from job descriptions
+- **Interactive chart** showing top skills using Chart.js
+- **Job listing results** with titles, companies, locations, and clickable links
+- Clean and modern UI using HTML, CSS, and Flask templating
 
 ## Tech Stack
 
@@ -35,7 +35,7 @@ You search for **machine learning**
 
 ---
 
-## 📌 To Do
+## To Do
 
 - [ ] Add support for multiple job boards  
 - [ ] Highlight matched keywords in job descriptions  
