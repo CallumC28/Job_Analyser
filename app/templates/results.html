@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analysis Results</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #eef2f7;
+      padding: 40px;
+      margin: 0;
+    }
+    h2 {
+      text-align: center;
+      color: #444;
+    }
+    .chart-container, .job-list {
+      max-width: 800px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    canvas {
+      margin-top: 20px;
+    }
+    ul.job-listings {
+      list-style: none;
+      padding: 0;
+    }
+    ul.job-listings li {
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #ddd;
+    }
+    ul.job-listings a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    ul.job-listings a:hover {
+      text-decoration: underline;
+    }
+    .job-meta {
+      color: #666;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="chart-container">
+    <h2>Top Skills in Demand</h2>
+    <canvas id="skillsChart"></canvas>
+  </div>
+
+  <div class="job-list">
+    <h2>Job Listings ({{ job_list|length }} found)</h2>
+    <ul class="job-listings">
+      {% for job, link in job_list %}
+        <li>
+          <a href="{{ link }}" target="_blank">{{ job.title }}</a><br>
+          <span class="job-meta">{{ job.company }} - {{ job.location }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <script>
+    const skillsData = JSON.parse('{{ skills | tojson | safe }}');
+    const skillLabels = Object.keys(skillsData);
+    const skillCounts = Object.values(skillsData);
+
+    new Chart(document.getElementById('skillsChart'), {
+      type: 'bar',
+      data: {
+        labels: skillLabels,
+        datasets: [{
+          label: 'Mentions',
+          data: skillCounts,
+          backgroundColor: 'rgba(54, 162, 235, 0.6)',
+          borderColor: 'rgba(54, 162, 235, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
