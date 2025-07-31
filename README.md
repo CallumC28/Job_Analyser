@@ -21,6 +21,16 @@ A web application that scrapes real job listings, analyses in-demand skills usin
 
 ---
 
+## Screenshots
+
+### Home Page
+![Homepage](screenshots/homepage.png)
+
+### Results Page with Skills Chart & Job Listings
+![Results Page](screenshots/results.png)
+
+---
+
 ## Example Output
 
 You search for **machine learning**
