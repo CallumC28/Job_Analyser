@@ -31,20 +31,6 @@ A web application that scrapes real job listings, analyses in-demand skills usin
 
 ---
 
-## Example Output
-
-You search for **machine learning**
-
-- The app scrapes jobs from the web
-- Extracts relevant skills like **Python**, **TensorFlow**, **PyTorch**
-- Displays a chart of in-demand skills
-- Lists job titles with direct links, such as:
-
-  - **Machine Learning Engineer** — *OpenAI* — Remote  
-  - **Data Scientist** — *Google* — London  
-
----
-
 ## To Do
 
 - [ ] Add support for multiple job boards  
