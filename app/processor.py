@@ -2,7 +2,7 @@ import pandas as pd
 from collections import Counter
 import re
 
-SKILLS_DB = ['Python', 'JavaScript', 'SQL', 'React', 'AWS', 'Django', 'Flask', 'Machine Learning', 'Data Analysis', 'HTML', 'CSS', 'Java', 'C++', 'Git', 'Docker']
+SKILLS_DB = ['Python', 'JavaScript', 'SQL', 'React', 'AWS', 'Django', 'Flask', 'Machine Learning', 'Data Analysis', 'HTML', 'CSS', 'Java', 'C++', 'Git', 'Docker'] #Can add skills you want to quantify for your chosen job search
 
 def extract_skills(text):
     found = [skill for skill in SKILLS_DB if re.search(r'\b' + re.escape(skill) + r'\b', text, re.I)]
