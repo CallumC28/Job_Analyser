@@ -1,6 +1,6 @@
 # Job Market Analyser
 
-A web application that scrapes real job listings, analyses in-demand skills using NLP, and displays job openings with direct links - perfect for job seekers to see most relevant skills employers want.
+A web application that scrapes real job listings, analyses in-demand skills using NLP, and displays job openings with direct links - good for job seekers to see most relevant skills employers want.
 
 ## Features
 
